@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Woven Artisan</title>
+	<link rel = "stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/style.css') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" crossorigin="anonymous"  />
+</head>
+<body>
+<!--header section-->
+<header>
+	<div class = "header" style="background:url('{{ url_for('static', filename = 'images/header.jpeg') }}') center / cover no-repeat">
+		<div class="container">
+			<div class = "navbar">
+				<div class="logo">
+					<a href="{{ url_for('home') }}"><img src = "{{ url_for('static', filename = 'images/logo.png') }}" width = 60px /></a>
+				</div>	
+				<div class = "Brand">
+					<h3 style="color: white; padding-left: 25px; font-style:italic;">Woven Artisans</h3>
+				</div>		
+				<nav id = "MenuItems">
+					<a href="#" class="icon" onclick="myFunction()">&#9776;</a>
+					<a href = "{{ url_for('account') }}">Login/Register</a>
+                    <a href = "{{ url_for('about_us') }}">About Us</a>
+				    <a href = "{{ url_for('product') }}">Products</a>
+					<a href = "{{ url_for('home') }}">Home</a>
+				</nav>
+				<!-- JavaScript for collapsing the menu bar -->
+				<script>
+					function myFunction() {
+						var x = document.getElementsByTagName("nav")[0];
+						if (x.className === "") {
+							x.className += "responsive";
+						} else {
+							x.className = "";
+						}
+					}
+                </script>
+			</div>	
+		</div>
+		<div class="row">
+			<div class="col-2">
+			  <h2 style ="padding-left: 10px;">
+				Buy Handlooms <br />
+					Save<br/>
+				the art of weaving by weavers
+			  </h2>
+			  <h4 style="color: white; padding-left: 10px;">Handwoven with love and tradition,</h4>
+			  <h4 style="color: white; padding-left: 10px;">Elevate your style with authentic handwoven textiles</h4>
+			  <a href="{{ url_for('product') }}" target="_blank" rel="noopener noreferrer" class="btn" >Explore Now</a>
+			 
+			  <h2> </h2>
+			</div>
+		</div>
+	</div>
+</header><br>
+	<div class="mission-container">
+		<img src="{{ url_for('static', filename = 'images/artisan1.jpg') }}">
+		<img src="{{ url_for('static', filename = 'images/oldlady.jpg') }}">
+		<img src="{{ url_for('static', filename = 'images/artisan2.jpg') }}">
+		<div>&nbsp;</div><br>
+		<div class = "Mission">
+			<h2> Our Mission </h2><br>
+			<p>We aim to preserve and exhibit the rich cultural heritage of handloom weaving by providing a platform for talented weavers to showcase 
+				their unique creations and connect with a global audience. Our ultimate goal is to empower handloom weavers to maintain their livelihoods 
+				and retain their unique identity as artisans. We envision a world where handloom weaving is valued and recognized as an integral part of 
+				our cultural heritage.
+			</p>
+	    </div>
+	</div><br><br>
+
+<div class="container-product">
+	<div class="row-product">
+	  <div class="card-product">
+		<img src="{{ url_for('static', filename = 'images/clothing.jpeg') }}" alt="">
+		<h4>Clothing</h4>
+		<p>Our handloom website features a wide variety of clothing woven by skilled weavers using traditional techniques that includes various kinds of fabrics, kurta sets and other fashion trends.
+		</p>
+		<a href="{{ url_for('product') }}" class="btn"><b>Explore</b></a>
+	  </div>
+	  <div class="card-product">
+		<img src="{{ url_for('static', filename = 'images/access.jpeg') }}" alt="">
+		<h4>Accessories</h4>
+		<p>Our handloom website also features a range of accessories that are handcrafted by skilled weaver artisans where accessories are perfect for adding a touch of elegance and style.</p>
+		<a href="{{ url_for('product') }}" class="btn"><b>Explore</b></a>
+	  </div>
+	  <div class="card-product">
+		<img src="{{ url_for('static', filename = 'images/pottery.jpeg') }}" alt="">
+		<h4>Pottery</h4>
+		<p>Our handloom website also features a range of pottery products that are handcrafted by skilled pottery artisans where the products are perfect for adding a touch of rustic charm and beauty to your home.</p>
+		<a href="{{ url_for('product') }}" class="btn"><b>Explore</b></a>
+	  </div>
+	</div>
+</div><br>
+
+<footer>
+	<div class="container-wrap">
+		<div class="row">
+			<div class="column">
+				<div class="footer-widget">
+					<h3 style = "color: rgb(223, 216, 216);">Payment Methods</h3>
+					<div class = "cards">
+						<i class = "fab fa-cc-mastercard"></i>
+						<i class = "fab fa-cc-visa"></i>
+						<i class = "fab fa-cc-discover"></i>
+					</div><br>
+					<p style="color: rgb(223, 216, 216);"><span><i class = "fas fa-lock"></i></span>Secure Online Payment</p>
+				</div>
+			</div>
+			<div class = "column">
+				<div class="footer-widget">
+				<h2 class = "widget-title" style = "color: rgb(223, 216, 216);">Information</h2>
+				<ul class = "list">
+					<li><a href = "{{ url_for('about_us') }}">About Us</a></li>
+					<li><a href = "{{ url_for('product') }}">Shopping Cart</a></li>
+					<li><a href = "{{ url_for('product') }}">Shipping & Delivery</a></li>
+				</ul>
+			</div>
+			</div>
+			<div class = "column">
+				<div class="footer-widget">
+					<h2 class = "widget-title " style="color: rgb(223, 216, 216);">Contact</h2>
+
+					<div class = "contact-number">
+						<i class = "fas fa-phone-square-alt"></i>Phone: +1 (800)-123-1239
+					</div>
+					<div class = "email">
+						<i class = "fas fa-envelope"></i> Email: wovenartisans@gmail.com
+					</div>
+					<div class = "social">
+						<a href="#"><i class = "fab fa-facebook-square"></i></a>
+						<a href="#"><i class = "fab fa-instagram"></i></a>
+						<a href="#"><i class = "fab fa-twitter"></i></a>
+						
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

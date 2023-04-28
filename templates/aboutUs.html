@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Woven Artisan</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/style.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+          crossorigin="anonymous" />
+      </head>
+  <body>
+    <!--header section-->
+    <header>
+      <div class = "header" style="background:url('{{ url_for('static', filename = 'images/header.jpeg') }}') center / cover no-repeat">
+        <div class="container">
+          <div class = "navbar">
+            <div class="logo">
+              <a href="{{ url_for('home') }}"><img src = "{{ url_for('static', filename = 'images/logo.png') }}" width = 60px /></a>
+            </div>	
+            <div class = "Brand">
+              <h3 style="color: white; padding-left: 25px; font-style:italic;">Woven Artisans</h3>
+            </div>		
+            <nav id = "MenuItems">
+              <a href="#" class="icon" onclick="myFunction()">&#9776;</a>
+              <a href = "{{ url_for('account') }}">Login/Register</a>
+                        <a href = "{{ url_for('about_us') }}">About Us</a>
+                <a href = "{{ url_for('product') }}">Products</a>
+              <a href = "{{ url_for('home') }}">Home</a>
+            </nav>
+            <!-- JavaScript for collapsing the menu bar -->
+            <script>
+              function myFunction() {
+                var x = document.getElementsByTagName("nav")[0];
+                if (x.className === "") {
+                  x.className += "responsive";
+                } else {
+                  x.className = "";
+                }
+              }
+            </script>
+          </div>	
+        </div>
+      </div>
+    </header>
+    <main-aboutus>
+      <section class="person">
+        <img src=".{{ url_for('static', filename = 'images/saranya.jpg') }}" alt="Saranya Chintalapati" />
+        <h2>Saranya Chintalapati</h2>
+        <p>
+          Saranya Chintalapati is a graduate student at USF pursuing her Masters in Business Analytics amd Information Systems. 
+          She worked previously at Cognizant, India as an Oracle Developer for 2 years. She primarily developed the Home page 
+          of this website along with product page creation and its validation of cart using javascript. 
+      </section>
+      <section class="person">
+        <img src="{{ url_for('static', filename = 'images/akhilesh.jpeg') }}" alt="Akhilesh Potharaju" />
+        <h2>Akhilesh Potharaju</h2>
+        <p>
+          Akhilesh Potharaju is a graduate student pursuing masters in Business Analytics and Information Systems at USF. 
+          He worked for Zerofox, India as a data analyst for 2 years. He assisted in creating the chart.js to indicate the 
+          sales of each product.
+        </p>
+      </section>
+      <section class="person">
+        <img src="{{ url_for('static', filename = 'images/keerthi.jpeg') }}" alt="Keerthi Bai reddy" />
+        <h2>Keerthi Bai reddy</h2>
+        <p>
+          Keerthi is a graduate student at USF pursuing her masters in Business Analytics and Information Systems. She has 3+ 
+          years of work experience as an Application Development Analyst for the client Google at Accenture, India. She has 
+          mainly worked on Products page and the cart validation using javascript, styling and layouts of other pages through CSS. 
+        </p>
+      </section>
+      <section class="person">
+        <img src="{{ url_for('static', filename = 'images/suraj.jpeg') }}" alt="Suraj Dantuluri" />
+        <h2>Suraj Dantuluri</h2>
+        <p>
+          Suraj Varma Dantuluri is a graduate student who is currently pursuing a Master's degree in Business Analytics and 
+          Information Systems at the University of South Florida. With previous experience as a Support Analyst at ZenithTech 
+          Aero Consultants and a Process Associate at Genpact, India. Additionally, he is skilled in web development, and
+          he contributed to the creation of the "About Us" page and worked on the login/Register form validations.
+          
+        </p>
+      </section>
+    </main-aboutus>
+    </body><br><br>
+    <footer>
+      <div class="container-wrap">
+        <div class="row">
+          <div class="column">
+            <div class="footer-widget">
+              <h3 style = "color: rgb(223, 216, 216);">Payment Methods</h3>
+              <div class = "cards">
+                <i class = "fab fa-cc-mastercard"></i>
+                <i class = "fab fa-cc-visa"></i>
+                <i class = "fab fa-cc-discover"></i>
+              </div><br>
+              <p style="color: rgb(223, 216, 216);"><span><i class = "fas fa-lock"></i></span>Secure Online Payment</p>
+            </div>
+          </div>
+          <div class = "column">
+            <div class="footer-widget">
+            <h2 class = "widget-title" style = "color: rgb(223, 216, 216);">Information</h2>
+            <ul class = "list">
+              <li><a href = "{{ url_for('about_us') }}">About Us</a></li>
+              <li><a href = "{{ url_for('product') }}">Shopping Cart</a></li>
+              <li><a href = "{{ url_for('product') }}">Shipping & Delivery</a></li>
+            </ul>
+          </div>
+          </div>
+          <div class = "column">
+            <div class="footer-widget">
+              <h2 class = "widget-title " style="color: rgb(223, 216, 216);">Contact</h2>
+    
+              <div class = "contact-number">
+                <i class = "fas fa-phone-square-alt"></i>Phone: +1 (800)-123-1239
+              </div>
+              <div class = "email">
+                <i class = "fas fa-envelope"></i> Email: wovenartisans@gmail.com
+              </div>
+              <div class = "social">
+                <a href="#"><i class = "fab fa-facebook-square"></i></a>
+                <a href="#"><i class = "fab fa-instagram"></i></a>
+                <a href="#"><i class = "fab fa-twitter"></i></a>
+                
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </footer>
+</html>

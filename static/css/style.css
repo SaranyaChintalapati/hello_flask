@@ -1,0 +1,536 @@
+.header {
+  /*background-image: url("{{ url_for('static', filename = 'images/header.jpeg') }}");*/
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.logo{
+  margin-bottom: 8px;
+}
+
+nav{
+  flex: 1;
+  text-align: right;
+  overflow: hidden;
+  z-index: 1;
+}
+nav a{
+  float: right;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px
+}
+
+nav a:hover {
+  background-color: transparent;
+  color: grey;
+}
+
+/*style for collapsing button*/
+.icon{
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  float: right;
+  padding: 14px 16px;
+}
+
+@media screen and (max-width: 600px){
+  nav a:not(:first-child){
+    display: none;
+  }
+
+  nav a.icon{
+    display: block;
+  }
+
+  /* Style for the responsive navigation menu */
+  nav.responsive{
+    position: relative;
+  }
+
+  nav .responsive a.icon{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  nav.responsive a{
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.container {
+  background-color: transparent;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: rgba(0,0,0,0.2);
+}
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.col-2 {
+  flex-basis: 50%;
+  min-width: 300px;
+}
+
+.col-2 img {
+  max-width: 100%;
+  padding: 50px 0;
+}
+
+.col-2 h2 {
+  font-size: 40px;
+  line-height: 60px;
+  margin: 25px 0;
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  background: #ff523b;
+  color: #ffffff;
+  padding: 8px 30px;
+  margin: 30px 0;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.5s;
+}
+
+.btn:hover {
+  background: #563434;
+}
+
+.mission-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.mission-container img{
+  width: 30%;
+  height: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 1.5rem;
+}
+
+.Mission {
+  text-align: center;
+}
+
+/*
+.our-mission .row{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+}
+
+.our-mission .row .image-container{
+  flex: .3 .3 10rem;
+  position: relative;
+}
+
+
+.our-mission .row .image-container img{
+  width: 100%;
+  border: 1.5rem;
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.our-mission .row .Mission{
+    flex: 1 1 40rem;
+}
+
+
+.our-mission .row .Mission h3{
+  font-size: 2rem;
+  color: black;
+}
+
+
+.our-mission .row .Mission p{
+  font-size: 1rem;
+  color: black;
+  padding: 5rem 0;
+  padding-top: 1rem;
+  line-height: 1.5rem;
+}
+*/
+
+.meet{
+  margin-left: 40px;
+}
+
+.img-mission img{
+max-width: 180%;
+}
+.img-artisans img{
+max-width: 100%;
+}
+
+.img-artisans{
+display: flex;
+
+}
+.img-artisans-2{
+display: flex;
+}
+
+footer{
+background-color: #996633;
+color: black;
+}
+.footer-widget ul li a{
+color: rgb(223, 216, 216);
+}
+.footer-widget ul li a:hover{
+color: black;
+transition: all .5s ease;
+}
+.social a{
+display: inline-block;
+font-size: 20px;
+color: rgb(223, 216, 216);
+margin-right: 10px;
+}
+.social a:hover{
+color: black;
+transition: all .5s ease
+}
+
+.footer-widget{
+margin: 0 10px;
+text-align: justify;
+}
+
+.widget-title{
+margin-bottom: 20px;
+text-transform: uppercase;
+font-size: 15px;
+padding-top: 30px;
+}
+.footer-widget h3{
+  line-height: 15px;
+  margin: 10px 0 30px 0px;
+}
+
+.cards i{
+display: inline-block;
+font-size: 30px;
+margin-right: 20px;
+color: rgb(223, 216, 216);
+}
+.footer-widget ul{
+margin-left: 20px;
+}
+.footer-widget ul li{
+padding-bottom: 14px;
+}
+.footer-widget ul li a{
+text-decoration: none;
+}
+
+.contact-address{
+padding-bottom: 20px;
+color: rgb(223, 216, 216);
+}
+.contact-number{
+padding-bottom: 20px;
+color: rgb(223, 216, 216);
+}
+.email{
+padding-bottom: 20px;
+color: rgb(223, 216, 216);
+}
+
+.list{
+color: rgb(223, 216, 216);
+}
+
+/*@media screen and (max-width: 768px) {
+  .header .header .container-wrap {
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+  }
+
+  
+}*/
+
+/*CSS for Products Page*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-product {
+  width: 90%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.row-product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-product {
+  flex: 1 1 20rem;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  border-radius: 15px;
+  flex-direction: column;
+  margin: 10px 20px;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+.card-product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+.card-product h4 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.card-product p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card-product .btn {
+  display: inline-block;
+  margin-top: auto;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.card-product a {
+  color: white;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .card-product {
+    flex: 1 1 45%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .card-product {
+    flex: 1 1 80%;
+  }
+}
+
+
+
+/*CSS for Aboutus Page*/
+
+main-aboutus {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1em;
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin: 10px 20px;
+  padding: 10px 20px;
+  text-align: center;
+  flex: 1 1 10rem;
+  overflow: hidden;
+}
+
+main-aboutus img {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1em auto;
+  max-width: 90%;
+}
+
+main-aboutus h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+main-aboutus p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  main-aboutus {
+    padding: 0.5em;
+  }
+  
+  .person {
+    min-width: 200px;
+    margin: 0.5em 0;
+    padding: 0.5em;
+  }
+  
+  main-aboutus img {
+    margin-bottom: 0.5em;
+  }
+  
+  main-aboutus h2 {
+    font-size: 1.2em;
+  }
+  
+  main-aboutus p {
+    font-size: 0.9em;
+  }
+}
+/*@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .person {
+    width: 90%;
+  }
+
+  .container {
+    max-width: 720px;
+    padding: 0 10px;
+  }
+
+  .mission-container{
+    max-width: 720px;
+    padding: 0 10px;
+  }
+  
+  .img-mission img,
+  .img-artisans img,
+  .img-artisans,
+  .img-artisans-2
+  {
+    max-width: 720px;
+    padding: 0 10px;
+  }
+}*/
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  /* Make the header navigation items display vertically */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Add some spacing between navigation items */
+  #MenuItems li {
+    padding: 10px;
+  }
+  
+  /* Adjust the header content to fit smaller screens */
+  .col-2 {
+    text-align: center;
+  }
+  
+  /* Reduce the font sizes */
+  h2 {
+    font-size: 28px;
+  }
+  
+  h4 {
+    font-size: 18px;
+  }
+  
+  /* Make the images in the mission container stack vertically */
+  .mission-container img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Reduce the font size of the mission container content */
+  .Mission h2 {
+    font-size: 28px;
+  }
+  
+  .Mission p {
+    font-size: 16px;
+  }
+  
+  /* Adjust the product cards to fit smaller screens */
+  .card-product {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 425px) {
+  /* Reduce the font sizes even further */
+  h2 {
+    font-size: 24px;
+  }
+  
+  h4 {
+    font-size: 16px;
+  }
+  
+  .Mission h2 {
+    font-size: 24px;
+  }
+  
+  .Mission p {
+    font-size: 14px;
+  }
+  
+  /* Adjust the product card heights */
+  .card-product {
+    height: auto;
+  }
+  
+  /* Reduce the button font sizes */
+  .btn {
+    font-size: 14px;
+  }
+}
+
+

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-18">
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<title>Products Page - shopping cart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<!--Link to CSS -->
+	<link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/style_product.css') }}">
+	<!-- Box Icons -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	
+	
+</head>
+<body> 
+    <header>
+        <!--Nav-->
+        <div class="nav container">
+            <a href = "{{ url_for('home') }}" class = "logo">Woven Artisans</a>
+            <!--shopping cart Icon-->
+            <i class='bx bx-shopping-bag' id = "cart-icon"></i>
+            <!--cart-->
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+                <!--cart content-->
+                <div class="cart-content">
+                    <!--<div class="cart-box">
+                        <img src="images/baluchari.jpg" alt="" class="cart-img">
+                        </div>-->
+                </div>
+                <!--total-->
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$50</div>
+                </div>
+                <!--Buy Button-->
+                <a href = "{{ url_for('payment') }}"><button type = "button" class = "btn-buy">Buy Now</button></a>
+                <!--cart Close-->
+                <i class='bx bx-x' id = "close-cart"></i>
+            </div>
+        </div>
+    </header>
+    <!--shopping section-->
+    <section class = "shop container">
+        <h2 class="section-title">Shop Products</h2>
+        <!--content-->
+        <div class="shop-content">
+            <!--box 1-->
+            <div class="product-box">
+                <img src="{{ url_for('static', filename = 'images/pochampally.jpeg') }}" alt="" class="product-img">
+                <h2 class="product-title">Pochampally Saree</h2>
+                <span class="price">$50</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!--box 2-->
+            <div class="product-box">
+                <img src="{{ url_for('static', filename = 'images/venkatagiri saree.jpg') }}" alt="" class="product-img">
+                <h2 class="product-title">Venkatagiri Saree</h2>
+                <span class="price">$30</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!--box 3-->
+            <div class="product-box">
+                <img src="{{ url_for('static', filename = 'images/khadi.jpeg') }}" alt="" class="product-img">
+                <h2 class="product-title">Khadi Saree</h2>
+                <span class="price">$25</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!--box 4-->
+            <div class="product-box">
+                <img src="{{ url_for('static', filename = 'images/baluchari.jpg') }}" alt="" class="product-img">
+                <h2 class="product-title">Baluchari Saree</h2>
+                <span class="price">$35</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!--box 5-->
+            <div class="product-box">
+                <img src="{{ url_for('static', filename = 'images/lenin.jpeg') }}" alt="" class="product-img">
+                <h2 class="product-title">Lenin Saree</h2>
+                <span class="price">$20</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!--box 6-->
+            <div class="product-box">
+                <img src="{{ url_for('static', filename = 'images/brocade.jpeg') }}" alt="" class="product-img">
+                <h2 class="product-title">Brocade Saree</h2>
+                <span class="price">$30</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!--box 7-->
+            <div class="product-box">
+                <img src="{{ url_for('static', filename = 'images/Boho Pots.jpg') }}" alt="" class="product-img">
+                <h2 class="product-title">Boho Pots</h2>
+                <span class="price">$15</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!--box 8-->
+            <div class="product-box">
+                <img src="{{ url_for('static', filename = 'images/Bangles.jpg') }}" alt="" class="product-img">
+                <h2 class="product-title">Bangles</h2>
+                <span class="price">$10</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!--box 9-->
+            <div class="product-box">
+                <img src="{{ url_for('static', filename = 'images/cushion_covers.jpg') }}" alt="" class="product-img">
+                <h2 class="product-title">Cushion Covers</h2>
+                <span class="price">$10</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!--box 10-->
+            <div class="product-box">
+                <img src="{{ url_for('static', filename = 'images/handlock printed kurtaset.jpg') }}" alt="" class="product-img">
+                <h2 class="product-title">Block printed Kurtas</h2>
+                <span class="price">$15</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!--box 11-->
+            <div class="product-box">
+                <img src="{{ url_for('static', filename = 'images/Bowls.jpg') }}" alt="" class="product-img">
+                <h2 class="product-title">Soup Bowls</h2>
+                <span class="price">$10</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!--box 12-->
+            <div class="product-box">
+                <img src="{{ url_for('static', filename = 'images/plates.jpg') }}" alt="" class="product-img">
+                <h2 class="product-title">Plates</h2>
+                <span class="price">$15</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>            
+        </div>
+
+    </section>
+    <!--link to Javascript-->
+    <script src="{{ url_for('static', filename = 'js/main.js') }}"></script>
+
+    <div class="chart-container">
+
+    <canvas id ="finchart"></canvas>
+    <script src="{{ url_for('static', filename = 'js/finchart.js') }}"></script>
+</div>
+</body>
+</html>
